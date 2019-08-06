@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Self Study Test Suite" verbose="2" parallel="tests" thread-count="1">
+	<test name = "Baidu" >
+		<classes>
+	  		<class name="com.dextrys.fbm.TicketEntrySuite">
+	  			<methods>
+	  				<include name ="inboxTest" />
+	  				<include name ="searchTest" />
+	  			</methods>
+	  		</class>
+		</classes>
+	</test>
+ 
+	<listeners>
+		<listener class-name = "org.uncommons.reportng.HTMLReporter"></listener>
+		<listener class-name = "org.uncommons.reportng.JUnitXMLReporter"></listener>
+	</listeners>
+
+</suite>

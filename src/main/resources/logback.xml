@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+	<!-- Define log home -->
+	<property name="TestResult_HOME" value="test-output" />
+	
+	<!-- Output log to console -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <!-- Output log to file -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+	    <file>${TestResult_HOME}/Test.log</file>
+	    <encoder>
+	      <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+	    </encoder>
+	</appender>
+
+	<!--
+    <logger name="org.apache" level="WARN" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <logger name="org.littleshoot.proxy.impl" level="WARN" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <logger name="org.apache.http.client.protocol" level="WARN" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <logger name="io.netty" level="DEBUG" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>  -->
+ 
+	<logger name="com.dextrys.listeners.LifecycleLogger" level="INFO" additivity="false">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </logger>
+   <logger name="com.dextrys.config" level="INFO" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <logger name="com.dextrys.steps.sem" level="INFO" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <logger name="com.dextrys.fbm" level="INFO" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger> 
+    <root level="INFO">
+    	<appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>

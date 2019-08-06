@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+ 
+    <environment host="default">
+        <!-- SEM users -->
+        <role label="Teseter">
+            <login>auto_em</login>
+            <password>222</password>
+            <name>AUTOMATION</name>
+            <role>Eccc</role>
+        </role>
+    
+    </environment>
+
+    <environment host="qa1">
+        <role label="EventManager">
+            <login>com</login>
+            <password>2345</password>
+            <name></name>
+            <role>User</role>
+        </role>
+      
+    </environment>
+
+  
+</configuration>
