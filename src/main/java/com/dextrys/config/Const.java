@@ -9,13 +9,13 @@ public class Const {
     public static final long TEST_TIMEOUT = 300000;
     public static final long FILE_TIMEOUT = 60;
     public static final long MAIL_TIMEOUT = 30;
-    public static final String CHROMEDRIVER_PATH = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe";
+    public static final String CHROMEDRIVER_PATH = ".\\drivers\\chromedriver.exe";
     public static final String IEDRIVER_PATH = "C:\\iedriver\\IEDriverServer.exe";
 
 
     public static final String DEFAULT_BROWSER = "chrome";
     public static final int BROWSER_RESTART = 10;
-    public static final String DEFAULT_ENVIRONMENT = "https://time.epam.com";
+    public static final String DEFAULT_ENVIRONMENT = "https://www.baidu.com";
 
     public static final String ENV_PARAM = "env";
     public static final String CHECK_JS_PARAM = "checkJS";
